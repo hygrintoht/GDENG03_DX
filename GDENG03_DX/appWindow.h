@@ -1,10 +1,12 @@
 #pragma once
-#include "quadObject.h"
+//#include "quadObject.h"
 #include "window.h"
 
 class swapChain;
 class vertexBuffer;
-class quadObject;
+class constantBuffer;
+class vertexShader;
+class pixelShader;
 
 class appWindow : public  window
 {
@@ -23,12 +25,19 @@ public:
 
 private:
 	swapChain* m_swap_chain;
-	//vertexBuffer* m_vertex_buffer;
+	vertexBuffer* m_vertex_buffer;
+	constantBuffer* m_constant_buffer;
+	vertexShader* m_vertex_shader;
+	pixelShader* m_pixel_shader;
 
 	void* m_shader_byte_code = nullptr;
-	UINT m_size_shader = 0;
+	size_t m_size_shader = 0;
 
-	quadObject test1;
-	quadObject test2;
-	quadObject test3;
+	unsigned long m_old_time = 0;
+	float m_delta_time = 0;
+	float m_angle = 0;
+
+	//quadObject test1;
+	//quadObject test2;
+	//quadObject test3;
 };

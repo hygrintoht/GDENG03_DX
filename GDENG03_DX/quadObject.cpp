@@ -17,7 +17,7 @@ void quadObject::init(vec3 _position)
 	}
 	// set vertex buffer
 	m_vertex_buffer = graphicsEngine::get()->createVertexBuffer();
-	graphicsEngine::get()->getShaderBufferAndSize(&m_shader_byte_code, &m_size_shader);
+	//graphicsEngine::get()->getShaderBufferAndSize(&m_shader_byte_code, &m_size_shader);
 	m_vertex_buffer->load(list, sizeof(vertex), 4, m_shader_byte_code, m_size_shader);
 }
 

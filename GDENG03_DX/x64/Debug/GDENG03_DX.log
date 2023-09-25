@@ -1,2 +1,16 @@
-﻿  quadObject.cpp
+﻿  compilation object save succeeded; see E:\GitHub\GDENG03_DX\x64\Debug\pixelShader.cso
+  compilation object save succeeded; see E:\GitHub\GDENG03_DX\x64\Debug\vertexShader.cso
+  appWindow.cpp
+  constantBuffer.cpp
+  deviceContext.cpp
+E:\GitHub\GDENG03_DX\GDENG03_DX\deviceContext.cpp(53,13): warning C4244: '=': conversion from 'UINT' to 'FLOAT', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\deviceContext.cpp(54,14): warning C4244: '=': conversion from 'UINT' to 'FLOAT', possible loss of data
+  graphicsEngine.cpp
+  main.cpp
+  pixelShader.cpp
+  quadObject.cpp
+  swapChain.cpp
+  vertexBuffer.cpp
+  vertexShader.cpp
+  Generating Code...
   GDENG03_DX.vcxproj -> E:\GitHub\GDENG03_DX\x64\Debug\GDENG03_DX.exe
