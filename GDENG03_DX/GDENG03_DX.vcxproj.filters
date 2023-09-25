@@ -40,6 +40,15 @@
     <Filter Include="GameEngine\GraphicsEngine\Objects\Quads">
       <UniqueIdentifier>{08200c9c-edd9-4b20-b15b-1d0744f037d0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\ConstantBuffer">
+      <UniqueIdentifier>{a127884b-25e4-449f-ad47-f4713d96ecab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\PixelShader">
+      <UniqueIdentifier>{5a8c1c34-de03-4266-9ba4-c32ecc25652c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\VertexShader">
+      <UniqueIdentifier>{997659c3-9beb-4e5c-aa76-c0419216d016}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -65,6 +74,15 @@
     </ClCompile>
     <ClCompile Include="quadObject.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="constantBuffer.cpp">
+      <Filter>GameEngine\GraphicsEngine\ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="pixelShader.cpp">
+      <Filter>GameEngine\GraphicsEngine\PixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="vertexShader.cpp">
+      <Filter>GameEngine\GraphicsEngine\VertexShader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -92,5 +110,18 @@
     <ClInclude Include="quadObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="constantBuffer.h">
+      <Filter>GameEngine\GraphicsEngine\ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="pixelShader.h">
+      <Filter>GameEngine\GraphicsEngine\PixelShader</Filter>
+    </ClInclude>
+    <ClInclude Include="vertexShader.h">
+      <Filter>GameEngine\GraphicsEngine\VertexShader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="pixelShader.hlsl" />
+    <FxCompile Include="vertexShader.hlsl" />
   </ItemGroup>
 </Project>

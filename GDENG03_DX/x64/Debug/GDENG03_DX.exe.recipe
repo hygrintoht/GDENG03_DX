@@ -2,15 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\GitHub\GDENG03_DX\x64\Debug\GDENG03_DX.exe</FullPath>
+      <FullPath>C:\Users\Student\Documents\GitHub\GDENG03_DX\x64\Debug\GDENG03_DX.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>E:\GitHub\GDENG03_DX\x64\Debug\pixelShader.cso</FullPath>
+      <FullPath>C:\Users\Student\Documents\GitHub\GDENG03_DX\x64\Debug\pixelShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\GitHub\GDENG03_DX\x64\Debug\vertexShader.cso</FullPath>
+      <FullPath>C:\Users\Student\Documents\GitHub\GDENG03_DX\x64\Debug\vertexShader.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

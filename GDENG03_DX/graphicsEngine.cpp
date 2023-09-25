@@ -8,13 +8,11 @@
 #include "pixelShader.h"
 
 graphicsEngine::graphicsEngine()
-{
-	
+{	
 }
 
 graphicsEngine::~graphicsEngine()
 {
-	
 }
 
 graphicsEngine* graphicsEngine::get()
