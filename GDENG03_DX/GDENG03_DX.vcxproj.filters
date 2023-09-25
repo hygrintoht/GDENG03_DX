@@ -19,9 +19,6 @@
     <Filter Include="GameEngine">
       <UniqueIdentifier>{b0f282ec-0b51-442e-856b-6a23202d2949}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameEngine\WindowingSystem">
-      <UniqueIdentifier>{c7e0416a-1e34-4f06-9edc-552ba174fe34}</UniqueIdentifier>
-    </Filter>
     <Filter Include="GameEngine\GraphicsEngine">
       <UniqueIdentifier>{c5af6709-ee9a-4a73-a47a-7d5f21a00cd7}</UniqueIdentifier>
     </Filter>
@@ -49,16 +46,22 @@
     <Filter Include="GameEngine\GraphicsEngine\VertexShader">
       <UniqueIdentifier>{997659c3-9beb-4e5c-aa76-c0419216d016}</UniqueIdentifier>
     </Filter>
+    <Filter Include="App\WindowingSystem">
+      <UniqueIdentifier>{c7e0416a-1e34-4f06-9edc-552ba174fe34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\ApplicationWindow">
+      <UniqueIdentifier>{48e6efe8-e1b4-45b0-909b-af5e266d69ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\EngineTime">
+      <UniqueIdentifier>{a70e32f1-3e61-442e-be69-b6daa668462f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>App</Filter>
     </ClCompile>
-    <ClCompile Include="appWindow.cpp">
-      <Filter>App</Filter>
-    </ClCompile>
     <ClCompile Include="window.cpp">
-      <Filter>GameEngine\WindowingSystem</Filter>
+      <Filter>App\WindowingSystem</Filter>
     </ClCompile>
     <ClCompile Include="graphicsEngine.cpp">
       <Filter>GameEngine\GraphicsEngine</Filter>
@@ -84,13 +87,16 @@
     <ClCompile Include="vertexShader.cpp">
       <Filter>GameEngine\GraphicsEngine\VertexShader</Filter>
     </ClCompile>
+    <ClCompile Include="appWindow.cpp">
+      <Filter>App\ApplicationWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="engineTime.cpp">
+      <Filter>GameEngine\EngineTime</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="appWindow.h">
-      <Filter>App</Filter>
-    </ClInclude>
     <ClInclude Include="window.h">
-      <Filter>GameEngine\WindowingSystem</Filter>
+      <Filter>App\WindowingSystem</Filter>
     </ClInclude>
     <ClInclude Include="graphicsEngine.h">
       <Filter>GameEngine\GraphicsEngine</Filter>
@@ -118,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="vertexShader.h">
       <Filter>GameEngine\GraphicsEngine\VertexShader</Filter>
+    </ClInclude>
+    <ClInclude Include="appWindow.h">
+      <Filter>App\ApplicationWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="engineTime.h">
+      <Filter>GameEngine\EngineTime</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

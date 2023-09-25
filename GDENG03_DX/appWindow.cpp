@@ -76,13 +76,14 @@ void appWindow::onUpdate()
 	RECT rect = this->getClientWindowRect(); // get window rect data
 	graphicsEngine::get()->getImmediateDeviceContext()->setViewPortSize(rect.right - rect.left, rect.bottom - rect.top); // update viewport
 
+	/*
 	unsigned long new_time = 0;
 	if (m_old_time)
 		new_time = ::GetTickCount() - m_old_time;
 	m_delta_time = new_time / 1000.0f;
 	m_old_time = ::GetTickCount();
-
-	m_angle += 1.57f * m_delta_time;
+	*/
+	//m_angle += 1.57f * m_delta_time;
 	constant cc;
 	cc.m_angle = m_angle;
 

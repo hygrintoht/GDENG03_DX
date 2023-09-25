@@ -32,9 +32,10 @@ private:
 
 	void* m_shader_byte_code = nullptr;
 	size_t m_size_shader = 0;
-
+	/*
 	unsigned long m_old_time = 0;
 	float m_delta_time = 0;
+	*/
 	float m_angle = 0;
 
 	//quadObject test1;

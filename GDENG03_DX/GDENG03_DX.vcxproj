@@ -131,6 +131,7 @@
     <ClCompile Include="appWindow.cpp" />
     <ClCompile Include="constantBuffer.cpp" />
     <ClCompile Include="deviceContext.cpp" />
+    <ClCompile Include="engineTime.cpp" />
     <ClCompile Include="graphicsEngine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pixelShader.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="appWindow.h" />
     <ClInclude Include="constantBuffer.h" />
     <ClInclude Include="deviceContext.h" />
+    <ClInclude Include="engineTime.h" />
     <ClInclude Include="graphicsEngine.h" />
     <ClInclude Include="mathUtils.h" />
     <ClInclude Include="pixelShader.h" />
