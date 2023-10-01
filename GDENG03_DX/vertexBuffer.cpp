@@ -50,21 +50,12 @@ bool vertexBuffer::load(void* list_vertices, UINT size_vertex, UINT size_list, v
 			D3D11_INPUT_PER_VERTEX_DATA,
 			0
 		},
-		{	// vertex position 2
-			"POSITION",
-			1,
-			DXGI_FORMAT_R32G32B32_FLOAT,
-			0,
-			12,
-			D3D11_INPUT_PER_VERTEX_DATA, 
-			0
-		},
 		{	// color 1
 			"COLOR",
 			0,
 			DXGI_FORMAT_R32G32B32_FLOAT,
 			0,
-			24,
+			12,
 			D3D11_INPUT_PER_VERTEX_DATA,
 			0
 		},
@@ -73,7 +64,7 @@ bool vertexBuffer::load(void* list_vertices, UINT size_vertex, UINT size_list, v
 			1,
 			DXGI_FORMAT_R32G32B32_FLOAT,
 			0,
-			36,
+			24,
 			D3D11_INPUT_PER_VERTEX_DATA,
 			0
 		}

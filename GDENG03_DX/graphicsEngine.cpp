@@ -3,6 +3,7 @@
 #include "swapChain.h"
 #include "deviceContext.h"
 #include "vertexBuffer.h"
+#include "indexBuffer.h"
 #include "constantBuffer.h"
 #include "vertexShader.h"
 #include "pixelShader.h"
@@ -99,6 +100,11 @@ deviceContext* graphicsEngine::getImmediateDeviceContext()
 vertexBuffer* graphicsEngine::createVertexBuffer()
 {
 	return new vertexBuffer();
+}
+
+indexBuffer* graphicsEngine::createIndexBuffer()
+{
+	return new indexBuffer();
 }
 
 constantBuffer* graphicsEngine::createConstantBuffer()

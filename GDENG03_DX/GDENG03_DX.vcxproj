@@ -133,6 +133,7 @@
     <ClCompile Include="deviceContext.cpp" />
     <ClCompile Include="engineTime.cpp" />
     <ClCompile Include="graphicsEngine.cpp" />
+    <ClCompile Include="indexBuffer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pixelShader.cpp" />
     <ClCompile Include="quadObject.cpp" />
@@ -147,10 +148,13 @@
     <ClInclude Include="deviceContext.h" />
     <ClInclude Include="engineTime.h" />
     <ClInclude Include="graphicsEngine.h" />
+    <ClInclude Include="indexBuffer.h" />
     <ClInclude Include="mathUtils.h" />
+    <ClInclude Include="matrix4x4.h" />
     <ClInclude Include="pixelShader.h" />
     <ClInclude Include="quadObject.h" />
     <ClInclude Include="swapChain.h" />
+    <ClInclude Include="vector3.h" />
     <ClInclude Include="vertexBuffer.h" />
     <ClInclude Include="vertexShader.h" />
     <ClInclude Include="window.h" />
