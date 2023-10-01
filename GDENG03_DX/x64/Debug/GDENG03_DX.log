@@ -1,12 +1,5 @@
-﻿  appWindow.cpp
-E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(91,19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  constantBuffer.cpp
-  engineTime.cpp
-  graphicsEngine.cpp
-  pixelShader.cpp
-  quadObject.cpp
-  swapChain.cpp
-  vertexBuffer.cpp
-  vertexShader.cpp
-  Generating Code...
+﻿  compilation object save succeeded; see E:\GitHub\GDENG03_DX\x64\Debug\pixelShader.cso
+  compilation object save succeeded; see E:\GitHub\GDENG03_DX\x64\Debug\vertexShader.cso
+  appWindow.cpp
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(101,19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
   GDENG03_DX.vcxproj -> E:\GitHub\GDENG03_DX\x64\Debug\GDENG03_DX.exe

@@ -36,14 +36,33 @@ void appWindow::onCreate()
 	m_swap_chain->init(this->m_hwnd, rect.right - rect.left, rect.bottom - rect.top); //window setup
 
 	//create triangle(quad)
+	/* // base
 	vertex list[] =
 	{
-		{-0.5f,-0.5f,0.0f, -0.32f,-0.11f,0.0f,  0,0,0,  0,1,0 }, // POS1
-		{-0.5f, 0.5f,0.0f, -0.11f, 0.78f,0.0f,  1,1,0,  0,1,1 }, // POS2
-		{ 0.5f,-0.5f,0.0f,  0.75f,-0.73f,0.0f,  0,0,1,  1,0,0 }, // POS2
-		{ 0.5f, 0.5f,0.0f,  0.88f, 0.77f,0.0f,  1,1,1,  0,0,1 }
-	};	// list of vertices for quad (triangle strip with 4 vertices)
-
+		{-0.5f,-0.5f,0.0f, -0.32f,-0.11f,0.0f,  0,0,0,  0,1,0 },
+		{-0.5f, 0.5f,0.0f, -0.11f, 0.78f,0.0f,  1,1,0,  0,1,1 },
+		{ 0.5f,-0.5f,0.0f,  0.75f,-0.73f,0.0f,  0,0,1,  1,0,0 },
+		{ 0.5f, 0.5f,0.0f,  0.88f, 0.77f,0.0f,  1,1,1,  0,0,1}
+	};
+	*/
+	/* // regular
+	vertex list[] =
+	{
+		{-0.5f,-0.9f,0.0f, -0.32f,-0.11f,0.0f,  0,0,0,  0,1,0 },
+		{-0.9f, 0.3f,0.0f, -0.11f, 0.78f,0.0f,  1,1,0,  0,1,1 },
+		{ 0.9f,-0.3f,0.0f,  0.10f,-0.73f,0.0f,  0,0,1,  1,0,0 },
+		{-0.5f,-0.9f,0.0f,  0.88f, 0.77f,0.0f,  1,1,1,  0,0,1}
+	};	
+	*/
+	 // increasing/decreasing
+	vertex list[] =
+	{
+		{-0.7f,-0.9f,0.0f, -0.3f,-0.1f,0.0f,  0,0,0,  0,1,0 },
+		{-0.9f, 0.1f,0.0f, -0.1f, 0.8f,0.0f,  1,1,0,  0,1,1 },
+		{ 0.2f,-0.4f,0.0f,  0.7f,-0.7f,0.0f,  0,0,1,  1,0,0 },
+		{ 0.1f, 0.1f,0.0f,  0.8f, 0.8f,0.0f,  1,1,1,  0,0,1}
+	};
+	
 	UINT size_list = ARRAYSIZE(list); // size of list
 
 	//test1.init({ 0,0,0 });
@@ -78,15 +97,6 @@ void appWindow::onUpdate()
 	//update
 	RECT rect = this->getClientWindowRect(); // get window rect data
 	graphicsEngine::get()->getImmediateDeviceContext()->setViewPortSize(rect.right - rect.left, rect.bottom - rect.top); // update viewport
-
-	/*
-	unsigned long new_time = 0;
-	if (m_old_time)
-		new_time = ::GetTickCount() - m_old_time;
-	m_delta_time = new_time / 1000.0f;
-	//std::cout << "aw" << m_delta_time << std::endl;
-	m_old_time = ::GetTickCount();
-	*/
 
 	m_angle += 1.57f * engineTime::get()->getDeltaTime();
 	constant cc;
