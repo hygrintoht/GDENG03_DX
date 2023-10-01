@@ -6,24 +6,24 @@
 class engineTime
 {
 public:
-	static void init();
-	static double getDeltaTime();
+	static engineTime* get();
+	double getDeltaTime();
 
 private:
 	engineTime();
 	~engineTime();
-	engineTime(engineTime const&) {};
-	engineTime& operator=(engineTime const&) {};
+	engineTime(engineTime const&) {}
+	engineTime& operator=(engineTime const&) {}
 
-	static engineTime* sharedInstance;
+	engineTime* sharedInstance;
 
 	std::chrono::system_clock::time_point start;
 	std::chrono::system_clock::time_point end;
 
-	double deltaTime = 0.0f;
+	double deltaTime = 0;
 
-	static void logFrameStart();
-	static void logFrameEnd();
+	void logFrameStart();
+	void logFrameEnd();
 
-	friend class Window;
+	friend class window;
 };

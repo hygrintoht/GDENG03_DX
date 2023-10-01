@@ -10,6 +10,9 @@
 #include "vertexShader.h"
 #include "pixelShader.h"
 #include "Windows.h"
+#include "engineTime.h"
+
+//#include "iostream"
 
 appWindow::appWindow()
 {
@@ -37,7 +40,7 @@ void appWindow::onCreate()
 	{
 		{-0.5f,-0.5f,0.0f, -0.32f,-0.11f,0.0f,  0,0,0,  0,1,0 }, // POS1
 		{-0.5f, 0.5f,0.0f, -0.11f, 0.78f,0.0f,  1,1,0,  0,1,1 }, // POS2
-		{ 0.5f,-0.5f,0.0f,  0.75f,-0.73f,0.0f,  0,0,1,  1,0,0 },// POS2
+		{ 0.5f,-0.5f,0.0f,  0.75f,-0.73f,0.0f,  0,0,1,  1,0,0 }, // POS2
 		{ 0.5f, 0.5f,0.0f,  0.88f, 0.77f,0.0f,  1,1,1,  0,0,1 }
 	};	// list of vertices for quad (triangle strip with 4 vertices)
 
@@ -81,9 +84,11 @@ void appWindow::onUpdate()
 	if (m_old_time)
 		new_time = ::GetTickCount() - m_old_time;
 	m_delta_time = new_time / 1000.0f;
+	//std::cout << "aw" << m_delta_time << std::endl;
 	m_old_time = ::GetTickCount();
 	*/
-	//m_angle += 1.57f * m_delta_time;
+
+	m_angle += 1.57f * engineTime::get()->getDeltaTime();
 	constant cc;
 	cc.m_angle = m_angle;
 
@@ -92,7 +97,6 @@ void appWindow::onUpdate()
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_vertex_shader, m_constant_buffer);
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_pixel_shader, m_constant_buffer);
 
-	//graphicsEngine::get()->setShaders(); // set shaders
 	graphicsEngine::get()->getImmediateDeviceContext()->setVertexShader(m_vertex_shader);
 	graphicsEngine::get()->getImmediateDeviceContext()->setPixelShader(m_pixel_shader);
 
