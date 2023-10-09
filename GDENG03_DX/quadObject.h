@@ -1,3 +1,4 @@
+/*
 #pragma once
 #include "mathUtils.h"
 #include "d3d11.h"
@@ -29,3 +30,4 @@ private:
 	void* m_shader_byte_code = nullptr;
 	UINT m_size_shader = 0;
 };
+*/

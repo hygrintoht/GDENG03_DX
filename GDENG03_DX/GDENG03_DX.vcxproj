@@ -130,8 +130,10 @@
   <ItemGroup>
     <ClCompile Include="appWindow.cpp" />
     <ClCompile Include="constantBuffer.cpp" />
+    <ClCompile Include="cubeObject.cpp" />
     <ClCompile Include="deviceContext.cpp" />
     <ClCompile Include="engineTime.cpp" />
+    <ClCompile Include="gameObject.cpp" />
     <ClCompile Include="graphicsEngine.cpp" />
     <ClCompile Include="indexBuffer.cpp" />
     <ClCompile Include="main.cpp" />
@@ -145,8 +147,10 @@
   <ItemGroup>
     <ClInclude Include="appWindow.h" />
     <ClInclude Include="constantBuffer.h" />
+    <ClInclude Include="cubeObject.h" />
     <ClInclude Include="deviceContext.h" />
     <ClInclude Include="engineTime.h" />
+    <ClInclude Include="gameObject.h" />
     <ClInclude Include="graphicsEngine.h" />
     <ClInclude Include="indexBuffer.h" />
     <ClInclude Include="mathUtils.h" />

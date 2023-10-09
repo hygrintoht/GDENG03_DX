@@ -1,5 +1,22 @@
-﻿  compilation object save succeeded; see E:\GitHub\GDENG03_DX\x64\Debug\pixelShader.cso
-  compilation object save succeeded; see E:\GitHub\GDENG03_DX\x64\Debug\vertexShader.cso
-  appWindow.cpp
-E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(101,19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+﻿  appWindow.cpp
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(44,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(45,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(46,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(47,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(52,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(53,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(54,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(55,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(60,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(61,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(62,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(63,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(99,54): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(99,42): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(99,29): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(99,19): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(112,72): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(112,60): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(112,47): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\appWindow.cpp(112,37): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
   GDENG03_DX.vcxproj -> E:\GitHub\GDENG03_DX\x64\Debug\GDENG03_DX.exe

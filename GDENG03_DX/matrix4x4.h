@@ -92,5 +92,12 @@ public:
 		m_mat[3][2] = -(near_plane / (far_plane - near_plane));
 	}
 
+	static matrix4x4 identityMatrix()
+	{
+		matrix4x4 temp;
+		temp.setIdentity();
+		return temp;
+	}
+
 	float m_mat[4][4] = {};
 };

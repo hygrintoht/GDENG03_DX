@@ -1,3 +1,4 @@
+/*
 #include "quadObject.h"
 #include "vertexBuffer.h"
 #include "graphicsEngine.h"
@@ -32,3 +33,4 @@ void quadObject::draw()
 	graphicsEngine::get()->getImmediateDeviceContext()->setVertexBuffer(m_vertex_buffer);
 	graphicsEngine::get()->getImmediateDeviceContext()->drawTriangleStrip(m_vertex_buffer->getSizeVertexList(), 0);
 }
+*/
