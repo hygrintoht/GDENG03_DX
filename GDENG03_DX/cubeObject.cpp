@@ -76,7 +76,7 @@ void cubeObject::update(matrix4x4 world_camera_temp, float top, float bottom, fl
 	if (inputSystem::get()->isKeyDown('S'))
 		scale_mutiplier = -2.0f;
 
-	m_scale += 0;//(engineTime::get()->getDeltaTime() / m_speed_multiplier) * scale_mutiplier;
+	m_scale += (engineTime::get()->getDeltaTime() / m_speed_multiplier) * scale_mutiplier;
 
 	matrix4x4 transform;
 	transform.setIdentity();

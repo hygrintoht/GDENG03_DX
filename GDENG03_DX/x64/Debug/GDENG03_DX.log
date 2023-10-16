@@ -17,6 +17,7 @@ E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(111,44): warning C4244: '=': convers
 E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(112,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 E:\GitHub\GDENG03_DX\GDENG03_DX\matrix4x4.h(155,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 E:\GitHub\GDENG03_DX\GDENG03_DX\cubeObject.cpp(67,45): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\GitHub\GDENG03_DX\GDENG03_DX\cubeObject.cpp(79,70): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 E:\GitHub\GDENG03_DX\GDENG03_DX\cubeObject.cpp(105,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 E:\GitHub\GDENG03_DX\GDENG03_DX\cubeObject.cpp(106,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   GDENG03_DX.vcxproj -> E:\GitHub\GDENG03_DX\x64\Debug\GDENG03_DX.exe
