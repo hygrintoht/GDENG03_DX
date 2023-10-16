@@ -18,7 +18,7 @@ struct constant
 	unsigned int m_time;
 };
 
-// returns a float between 0 and 1, then multiplies by scale, then shifts by shift
+// returns a float between 0 and 1, then multiplied by scale, then shifts by shift
 inline float randomFloat(float scale, float shift)
 {
 	return (float)rand() / (float)RAND_MAX * scale + shift;

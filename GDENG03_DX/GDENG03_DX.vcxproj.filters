@@ -1,18 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="App">
       <UniqueIdentifier>{b3134a98-63b9-4e8c-a751-361329db6a1e}</UniqueIdentifier>
     </Filter>
@@ -55,6 +43,21 @@
     <Filter Include="GameEngine\EngineTime">
       <UniqueIdentifier>{a70e32f1-3e61-442e-be69-b6daa668462f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameEngine\GameObject">
+      <UniqueIdentifier>{6ef22b31-4cc5-42e0-8c23-fa4fea9f257a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GameObject\CubeObject">
+      <UniqueIdentifier>{f1a4c599-0e09-4be8-a291-760560237655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Math">
+      <UniqueIdentifier>{47ebe737-c319-40b2-a037-f09c4c8866ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\IndexBuffer">
+      <UniqueIdentifier>{d9cf2152-7e95-42d9-a077-694656963c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Legacy">
+      <UniqueIdentifier>{3082b8da-7aff-406f-9413-29ba8755a5b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -75,9 +78,6 @@
     <ClCompile Include="vertexBuffer.cpp">
       <Filter>GameEngine\GraphicsEngine\VertexBuffer</Filter>
     </ClCompile>
-    <ClCompile Include="quadObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="constantBuffer.cpp">
       <Filter>GameEngine\GraphicsEngine\ConstantBuffer</Filter>
     </ClCompile>
@@ -93,6 +93,19 @@
     <ClCompile Include="engineTime.cpp">
       <Filter>GameEngine\EngineTime</Filter>
     </ClCompile>
+    <ClCompile Include="gameObject.cpp">
+      <Filter>GameEngine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="cubeObject.cpp">
+      <Filter>GameEngine\GameObject\CubeObject</Filter>
+    </ClCompile>
+    <ClCompile Include="indexBuffer.cpp">
+      <Filter>GameEngine\GraphicsEngine\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="quadObject.cpp">
+      <Filter>Legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="inputSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.h">
@@ -110,12 +123,6 @@
     <ClInclude Include="vertexBuffer.h">
       <Filter>GameEngine\GraphicsEngine\VertexBuffer</Filter>
     </ClInclude>
-    <ClInclude Include="mathUtils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="quadObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="constantBuffer.h">
       <Filter>GameEngine\GraphicsEngine\ConstantBuffer</Filter>
     </ClInclude>
@@ -131,6 +138,33 @@
     <ClInclude Include="engineTime.h">
       <Filter>GameEngine\EngineTime</Filter>
     </ClInclude>
+    <ClInclude Include="gameObject.h">
+      <Filter>GameEngine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="cubeObject.h">
+      <Filter>GameEngine\GameObject\CubeObject</Filter>
+    </ClInclude>
+    <ClInclude Include="mathUtils.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix4x4.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="vector3.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="indexBuffer.h">
+      <Filter>GameEngine\GraphicsEngine\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="vector4.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="quadObject.h">
+      <Filter>Legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="point.h" />
+    <ClInclude Include="inputSystem.h" />
+    <ClInclude Include="inputListener.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="pixelShader.hlsl" />

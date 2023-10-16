@@ -15,7 +15,7 @@ public:
 	virtual void init();
 	virtual void release();
 
-	virtual void update(float top, float bottom, float right, float left); //update every frame
+	virtual void update(matrix4x4 world_camera_temp, float top, float bottom, float right, float left); //update every frame
 	virtual void draw(); // draw object to scene
 
 	void loadVertexBuffer(void* shader_byte_code, size_t size_byte_shader); // load vertex buffer to object

@@ -1,6 +1,8 @@
 #include "window.h"
 #include "engineTime.h"
 
+#include "iostream"
+
 window* windowPTR = nullptr;
 
 window::window()
@@ -23,6 +25,21 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 			windowPTR->onCreate();
 			break;
 		}
+		case WM_SETFOCUS:
+		{
+			//window* m_window = (window*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
+			//m_window->onFocus();
+			windowPTR->onFocus();
+			break;
+		}
+		case WM_KILLFOCUS:
+		{
+			//window* m_window = (window*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
+			//m_window->onKillFocus();
+			windowPTR->onKillFocus();
+			break;
+		}
+		
 		case WM_DESTROY:
 		{
 			windowPTR->onDestroy();
@@ -142,4 +159,14 @@ void window::onUpdate()
 void window::onDestroy()
 {
 	m_is_run = false;
+}
+
+void window::onFocus()
+{
+	std::cout << "test" << std::endl;
+}
+
+void window::onKillFocus()
+{
+	std::cout << "test1" << std::endl;
 }

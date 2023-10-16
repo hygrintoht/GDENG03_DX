@@ -38,13 +38,12 @@ void gameObject::release()
 	//delete this
 }
 
-void gameObject::update(float top, float bottom, float right, float left)
+void gameObject::update(matrix4x4 world_camera_temp, float top, float bottom, float right, float left)
 {
 }
 
 void gameObject::draw()
 {
-
 	graphicsEngine::get()->getImmediateDeviceContext()->setVertexBuffer(m_vertex_buffer);
 	graphicsEngine::get()->getImmediateDeviceContext()->setIndexBuffer(m_index_buffer);
 	graphicsEngine::get()->getImmediateDeviceContext()->drawIndexedTriangleList(m_index_buffer->getSizeIndexList(), 0, 0);

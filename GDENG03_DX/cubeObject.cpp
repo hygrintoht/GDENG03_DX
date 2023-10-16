@@ -3,6 +3,7 @@
 #include "engineTime.h"
 #include "graphicsEngine.h"
 #include "constantBuffer.h"
+#include "inputSystem.h"
 
 cubeObject::cubeObject()
 {
@@ -58,20 +59,30 @@ cubeObject::~cubeObject()
 {
 }
 
-void cubeObject::update(float top, float bottom, float right, float left)
+void cubeObject::update(matrix4x4 world_camera_temp, float top, float bottom, float right, float left)
 {
 	constant cc;
 	cc.m_time = ::GetTickCount();
-	
+
 	m_pos += engineTime::get()->getDeltaTime() / 10.0f;
 	if (m_pos > 1.0f)
 		m_pos = 0;
-	
-	m_scale += engineTime::get()->getDeltaTime() / m_speed_multiplier;
 
-	cc.m_world.setScale(vector3(1, 1, 1));
+	// temporary input
+	float scale_mutiplier = 0;
+	if (inputSystem::get()->isKeyDown('W'))
+		scale_mutiplier = 2.0f;
+
+	if (inputSystem::get()->isKeyDown('S'))
+		scale_mutiplier = -2.0f;
+
+	m_scale += 0;//(engineTime::get()->getDeltaTime() / m_speed_multiplier) * scale_mutiplier;
 
 	matrix4x4 transform;
+	transform.setIdentity();
+
+	// world space
+	cc.m_world.setIdentity();
 
 	transform.setIdentity();
 	transform.setRotationZ(m_scale);
@@ -85,17 +96,16 @@ void cubeObject::update(float top, float bottom, float right, float left)
 	transform.setRotationX(m_scale);
 	cc.m_world *= transform;
 
-	cc.m_world *= m_transform; // setup scene transform
+	cc.m_world *= m_transform;
 
-	cc.m_view.setIdentity();
+	// view space
+	cc.m_view = world_camera_temp;
 
-	cc.m_proj.setOrthoLH
-	(
-		(right - left) / 300.0f,
-		(bottom - top) / 300.0f,
-		-4.0f,
-		4.0f
-	);
+	// projection
+	int width = (right - left);
+	int height = (bottom - top);
+	
+	cc.m_proj.setPerspectiveFovLH(1.57f, ((float)width / (float)height), 0.1f, 100.0f);
 
 	m_constant_buffer->update(graphicsEngine::get()->getImmediateDeviceContext(), &cc);
 }
@@ -104,3 +114,4 @@ void cubeObject::changeSpeed(float speed)
 {
 	m_speed_multiplier = speed;
 }
+
