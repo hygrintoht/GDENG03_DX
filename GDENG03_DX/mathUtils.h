@@ -33,3 +33,8 @@ inline float randFNOneToOne()
 {
 	return randomFloat(2.0f, -1.0f) ;
 }
+
+inline float lerp(float a, float b, float t)
+{
+	return (1.0f - t) * a + b * t;
+}

@@ -8,6 +8,9 @@ class engineTime
 public:
 	static engineTime* get();
 	double getDeltaTime();
+	double getRunningTime();
+	double getRunningTimeAsMilliseconds();
+	void togglePause();
 
 private:
 	engineTime();
@@ -21,6 +24,10 @@ private:
 	std::chrono::system_clock::time_point end;
 
 	double deltaTime = 0;
+
+	double runningTime = 0;
+
+	bool paused = false;
 
 	void logFrameStart();
 	void logFrameEnd();

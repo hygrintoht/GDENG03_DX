@@ -58,6 +58,12 @@
     <Filter Include="Legacy">
       <UniqueIdentifier>{3082b8da-7aff-406f-9413-29ba8755a5b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameEngine\InputSystem">
+      <UniqueIdentifier>{5982b204-4a2b-4c1a-bbfc-d923754030da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GameObject\MeshObject">
+      <UniqueIdentifier>{b4bd94e1-cbca-49a6-af2d-b5d95fe7ad06}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -105,7 +111,19 @@
     <ClCompile Include="quadObject.cpp">
       <Filter>Legacy</Filter>
     </ClCompile>
-    <ClCompile Include="inputSystem.cpp" />
+    <ClCompile Include="inputSystem.cpp">
+      <Filter>GameEngine\InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="meshObject.cpp">
+      <Filter>GameEngine\GameObject\MeshObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Imgui\imgui.cpp" />
+    <ClCompile Include="Imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Imgui\imgui_demo.cpp" />
+    <ClCompile Include="Imgui\imgui_draw.cpp" />
+    <ClCompile Include="Imgui\imgui_tables.cpp" />
+    <ClCompile Include="Imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Imgui\imgui_impl_win32.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.h">
@@ -162,9 +180,27 @@
     <ClInclude Include="quadObject.h">
       <Filter>Legacy</Filter>
     </ClInclude>
-    <ClInclude Include="point.h" />
-    <ClInclude Include="inputSystem.h" />
-    <ClInclude Include="inputListener.h" />
+    <ClInclude Include="inputListener.h">
+      <Filter>GameEngine\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="inputSystem.h">
+      <Filter>GameEngine\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="meshObject.h">
+      <Filter>GameEngine\GameObject\MeshObject</Filter>
+    </ClInclude>
+    <ClInclude Include="point.h">
+      <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="tiny_obj_loader.h" />
+    <ClInclude Include="Imgui\imconfig.h" />
+    <ClInclude Include="Imgui\imgui.h" />
+    <ClInclude Include="Imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="Imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Imgui\imgui_internal.h" />
+    <ClInclude Include="Imgui\imstb_rectpack.h" />
+    <ClInclude Include="Imgui\imstb_textedit.h" />
+    <ClInclude Include="Imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="pixelShader.hlsl" />

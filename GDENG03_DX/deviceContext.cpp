@@ -89,3 +89,8 @@ void deviceContext::setConstantBuffer(pixelShader* vertex_shader, constantBuffer
 {
 	m_device_context->PSSetConstantBuffers(0, 1, &buffer->m_buffer);
 }
+
+ID3D11DeviceContext* deviceContext::getDeviceContext()
+{
+	return this->m_device_context;
+}

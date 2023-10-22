@@ -6,6 +6,7 @@ public:
 	vector4() :m_x(0), m_y(0), m_z(0), m_w(0) {}
 	vector4(float x, float y, float z, float w) : m_x(x), m_y(y), m_z(z), m_w(w) {}
 	vector4(const vector4& vector) :m_x(vector.m_x), m_y(vector.m_y), m_z(vector.m_z), m_w(vector.m_w) {}
+	//vector4(float array[4]) : m_x(array[0]), m_y(array[1]), m_z(array[2]), m_w(array[3]) {}
 	~vector4() {}
 
 	void cross(vector4& v1, vector4& v2, vector4& v3)

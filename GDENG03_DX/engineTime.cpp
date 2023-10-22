@@ -19,6 +19,16 @@ double engineTime::getDeltaTime()
 	return deltaTime;
 }
 
+double engineTime::getRunningTime()
+{
+	return runningTime;
+}
+
+double engineTime::getRunningTimeAsMilliseconds()
+{
+	return runningTime * 1000;
+}
+
 void engineTime::logFrameStart()
 {
 
@@ -28,5 +38,18 @@ void engineTime::logFrameStart()
 void engineTime::logFrameEnd()
 {
 	end = std::chrono::system_clock::now();
-	deltaTime = (std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()) * .001;
+	if (!paused)
+	{
+		deltaTime = (std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()) * .001;
+		runningTime += deltaTime;
+	}
+	else
+	{
+		deltaTime = 0;
+	}
+}
+
+void engineTime::togglePause()
+{
+	paused = !paused;
 }

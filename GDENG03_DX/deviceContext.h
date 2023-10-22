@@ -27,7 +27,7 @@ public:
 	void setPixelShader(pixelShader* pixel_shader);
 	void setConstantBuffer(vertexShader* vertex_shader, constantBuffer* buffer);
 	void setConstantBuffer(pixelShader* pixel_shader, constantBuffer* buffer);
-
+	ID3D11DeviceContext* getDeviceContext();
 private:
 	ID3D11DeviceContext* m_device_context;
 

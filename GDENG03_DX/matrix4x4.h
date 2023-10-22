@@ -64,6 +64,23 @@ public:
 		m_mat[1][1] = cos(z);
 	}
 
+	void setRotation(const vector3& rotation) //note: xyz rotation
+	{
+		int x = rotation.m_x;
+		int y = rotation.m_y;
+		int z = rotation.m_z;
+
+		m_mat[0][0] = cos(y) * cos(z);
+		m_mat[0][1] = cos(y) * sin(z);
+		m_mat[0][2] = sin(y) * -1;
+		m_mat[1][0] = sin(x) * sin(y) * cos(z) - cos(x) * sin(z);
+		m_mat[1][1] = sin(x) * sin(y) * sin(z) + cos(x) * cos(z);
+		m_mat[1][2] = sin(x) * cos(y);
+		m_mat[2][0] = cos(x) * sin(y) * cos(z) + sin(x) * sin(z);
+		m_mat[2][1] = cos(x) * sin(y) * sin(z) - sin(x) * cos(z);
+		m_mat[2][2] = cos(x) * cos(y);
+	}
+
 	float getDeterminant()
 	{
 		vector4 v1 = vector4(this->m_mat[0][0], this->m_mat[1][0], this->m_mat[2][0], this->m_mat[3][0]);

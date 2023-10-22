@@ -22,6 +22,7 @@ public:
 	constantBuffer* getConstantBuffer() const;
 
 	matrix4x4 m_transform = matrix4x4::identityMatrix(); // transform of object(public);
+
 	void setPosition(vector3 position);
 	void setScale(vector3 scale);
 	void setRotation(vector3 rotation);

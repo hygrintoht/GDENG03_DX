@@ -22,10 +22,13 @@ public:
 	static graphicsEngine* get();
 
 	swapChain* createSwapChain();
+	ID3D11Device* getD3D11Device();
 	deviceContext* getImmediateDeviceContext();
+
 	vertexBuffer* createVertexBuffer();
 	indexBuffer* createIndexBuffer();
 	constantBuffer* createConstantBuffer();
+
 	vertexShader* createVertexShader(const void* shader_byte_code, size_t byte_code_size);
 	pixelShader* createPixelShader(const void* shader_byte_code, size_t byte_code_size);
 

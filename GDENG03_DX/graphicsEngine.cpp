@@ -92,6 +92,11 @@ swapChain* graphicsEngine::createSwapChain()
 	return new swapChain();
 }
 
+ID3D11Device* graphicsEngine::getD3D11Device()
+{
+	return this->m_d3d_device;
+}
+
 deviceContext* graphicsEngine::getImmediateDeviceContext()
 {
 	return this->m_imm_device_context;
