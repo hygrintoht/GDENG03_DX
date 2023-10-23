@@ -11,6 +11,7 @@ cubeObject::cubeObject()
 	vertex vertex_list[] =
 	{
 		//front vertices
+		/*
 		{ vector3(-0.5f, -0.5f, -0.5f), vector3(0, 1, 0), vector3(1,    0,    0) },
 		{ vector3(-0.5f,  0.5f, -0.5f), vector3(0, 1, 0), vector3(1, 0,    0) },
 		{ vector3(0.5f,  0.5f, -0.5f), vector3(0, 1, 0), vector3(1, 0,    0) },
@@ -21,6 +22,18 @@ cubeObject::cubeObject()
 		{ vector3(0.5f,  0.5f,  0.5f), vector3(0, 1, 0), vector3(1, 0, 0) },
 		{ vector3(-0.5f,  0.5f,  0.5f), vector3(0, 1, 0), vector3(1, 0, 0) },
 		{ vector3(-0.5f, -0.5f,  0.5f), vector3(0, 1, 0), vector3(1, 0,    0) }
+		*/
+
+		{ vector3(-0.5f, -0.5f, -0.5f), vector3(1, 0, 0), vector3(0.2f,    0,    0) },
+		{ vector3(-0.5f,  0.5f, -0.5f), vector3(1, 1, 0), vector3(0.2f, 0.2f,    0) },
+		{ vector3(0.5f,  0.5f, -0.5f), vector3(1, 1, 0), vector3(0.2f, 0.2f,    0) },
+		{ vector3(0.5f, -0.5f, -0.5f), vector3(1, 0, 0), vector3(0.2f,    0,    0) },
+
+		{ vector3(0.5f, -0.5f,  0.5f), vector3(0, 1, 0), vector3(0, 0.2f,    0) },
+		{ vector3(0.5f,  0.5f,  0.5f), vector3(0, 1, 1), vector3(0, 0.2f, 0.2f) },
+		{ vector3(-0.5f,  0.5f,  0.5f), vector3(0, 1, 1), vector3(0, 0.2f, 0.2f) },
+		{ vector3(-0.5f, -0.5f,  0.5f), vector3(0, 1, 0), vector3(0, 0.2f,    0) }
+
 	};
 
 	unsigned int index_list[] =
@@ -135,7 +148,7 @@ void cubeObject::update(matrix4x4 world_camera_temp, float top, float bottom, fl
 	
 	// world space
 	cc.m_world.setIdentity();
-	/*
+	
 	transform.setIdentity();
 	transform.setRotationZ(m_scale);
 	cc.m_world *= transform;
@@ -149,7 +162,8 @@ void cubeObject::update(matrix4x4 world_camera_temp, float top, float bottom, fl
 	cc.m_world *= transform;
 
 	cc.m_world *= m_transform;
-	*/
+	
+	/*
 	if (m_animation_direction == 1 && m_animation_timer > 1.0f)
 		m_animation_direction = -1;
 	if (m_animation_direction == -1 && m_animation_timer < 0)
@@ -162,7 +176,7 @@ void cubeObject::update(matrix4x4 world_camera_temp, float top, float bottom, fl
 	float animationLerpValue = lerp(0.01f, 1.0f, m_animation_timer);
 
 	m_transform.setScale(vector3(1.0f, animationLerpValue, 1.0f));
-	
+	*/
 	cc.m_world *= m_transform;
 	
 	// view space

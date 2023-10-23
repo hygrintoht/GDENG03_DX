@@ -13,16 +13,18 @@ UIManager::~UIManager()
 
 UIManager* UIManager::get()
 {
-    return sharedInstance;
+    //return sharedInstance;
+	return nullptr;
 }
 
 void UIManager::init(HWND windowHandle)
 {
-	sharedInstance = new UIManager(windowHandle);
+	//sharedInstance = new UIManager(windowHandle);
 }
 
 void UIManager::destroy()
 {
+	/*
 	// while ui list is not empty
 	while (!sharedInstance->uiList.empty())
 	{
@@ -32,4 +34,9 @@ void UIManager::destroy()
 		// delete ui window
 		// pop ui window from ui list
 	}
+	*/
+}
+
+void UIManager::drawAllUI()
+{
 }

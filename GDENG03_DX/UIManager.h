@@ -37,7 +37,7 @@ private:
 	UIManager(UIManager const&) {};
 	UIManager& operator = (UIManager const&){}
 
-	static UIManager* sharedInstance;
+	//static UIManager* sharedInstance;
 
 	std::vector<UIScreenAbstract*> uiList;
 	std::unordered_map<std::string, UIScreenAbstract*>uiTable;

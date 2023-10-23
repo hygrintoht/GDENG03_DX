@@ -224,7 +224,7 @@ void appWindow::onUpdate()
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_pixel_shader, test0.getConstantBuffer());
 	test0.draw();
 	*/
-	
+	/*
 	test1.update(world_camera_temp, rect.top, rect.bottom, rect.right, rect.left);
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_vertex_shader, test1.getConstantBuffer());
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_pixel_shader, test1.getConstantBuffer());
@@ -239,13 +239,14 @@ void appWindow::onUpdate()
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_vertex_shader, test3.getConstantBuffer());
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_pixel_shader, test3.getConstantBuffer());
 	test3.draw();
+	*/
 	/*
 	test4.update(world_camera_temp, rect.top, rect.bottom, rect.right, rect.left);
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_vertex_shader, test4.getConstantBuffer());
 	graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_pixel_shader, test4.getConstantBuffer());
 	test4.draw();
 	*/
-	/*
+	
 	for (int i = 0; i < m_cube_objects_size; i++)
 	{
 		m_cube_objects_list[i].update(world_camera_temp, rect.top, rect.bottom, rect.right, rect.left); //update object
@@ -253,7 +254,7 @@ void appWindow::onUpdate()
 		graphicsEngine::get()->getImmediateDeviceContext()->setConstantBuffer(m_pixel_shader, m_cube_objects_list[i].getConstantBuffer()); // set constant buffer to object constant buffer
 		m_cube_objects_list[i].draw(); // draw object
 	}
-	*/
+	
 	
 
 	// Rendering
@@ -334,8 +335,8 @@ void appWindow::onMouseMove(const point& mouse_position)
 		int width = (this->getClientWindowRect().right - this->getClientWindowRect().left);
 		int height = (this->getClientWindowRect().bottom - this->getClientWindowRect().top);
 
-		m_rot_x += (mouse_position.m_y - (height / 2.0f)) * engineTime::get()->getDeltaTime() * 0.1f;
-		m_rot_y += (mouse_position.m_x - (width / 2.0f)) * engineTime::get()->getDeltaTime() * 0.1f;
+		m_rot_x += (mouse_position.m_y - (height / 2.0f)) * 0.005f;// * engineTime::get()->getDeltaTime();
+		m_rot_y += (mouse_position.m_x - (width / 2.0f))  * 0.005f;// * engineTime::get()->getDeltaTime();
 
 		inputSystem::get()->setCursorPosition(point((int)(width / 2.0f), (int)(height / 2.0f)));
 	}
