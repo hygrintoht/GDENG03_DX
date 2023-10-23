@@ -149,6 +149,8 @@
     <ClCompile Include="pixelShader.cpp" />
     <ClCompile Include="quadObject.cpp" />
     <ClCompile Include="swapChain.cpp" />
+    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="UIScreenAbstract.cpp" />
     <ClCompile Include="vertexBuffer.cpp" />
     <ClCompile Include="vertexShader.cpp" />
     <ClCompile Include="window.cpp" />
@@ -180,6 +182,8 @@
     <ClInclude Include="quadObject.h" />
     <ClInclude Include="swapChain.h" />
     <ClInclude Include="tiny_obj_loader.h" />
+    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="UIScreenAbstract.h" />
     <ClInclude Include="vector3.h" />
     <ClInclude Include="vector4.h" />
     <ClInclude Include="vertexBuffer.h" />

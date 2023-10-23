@@ -1,8 +1,13 @@
 #include "appWindow.h"
 
+#include "Imgui/imgui.h"
+#include "Imgui/imgui_impl_dx11.h"
+#include "Imgui/imgui_impl_win32.h"
+
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "tiny_obj_loader.h"
 
+#include "string"
 #include "deviceContext.h"
 #include "swapChain.h"
 #include "constantBuffer.h"
@@ -15,10 +20,7 @@
 #include "engineTime.h"
 #include "inputSystem.h"
 
-#include "string"
-#include "Imgui/imgui.h"
-#include "Imgui/imgui_impl_dx11.h"
-#include "Imgui/imgui_impl_win32.h"
+#include "UIManager.h"
 
 appWindow::appWindow()
 {
@@ -36,7 +38,7 @@ appWindow::~appWindow()
 
 
 void appWindow::onCreate()
-{	
+{
 	window::onCreate();						//create window
 	inputSystem::get()->addListener(this);	// add app window as listener (removed because on focus handles that)
 	graphicsEngine::get()->init();			//initialize engine
@@ -140,6 +142,8 @@ void appWindow::onCreate()
 	// Setup Platform/Renderer backends
 	ImGui_ImplWin32_Init(m_hwnd);
 	ImGui_ImplDX11_Init(graphicsEngine::get()->getD3D11Device(), graphicsEngine::get()->getImmediateDeviceContext()->getDeviceContext());
+
+	UIManager::init(m_hwnd);
 }
 
 void appWindow::onUpdate()
@@ -170,7 +174,7 @@ void appWindow::onUpdate()
 	}
 	ImGui::End();
 
-	if(m_demo_window_active)
+	if (m_demo_window_active)
 		ImGui::ShowDemoWindow(); // Show demo window! :)
 
 	RECT rect = this->getClientWindowRect(); // get window rect data
@@ -257,6 +261,8 @@ void appWindow::onUpdate()
 	ImGui::Render();
 	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
 	// (Your code calls swapchain's Present() function)
+
+	UIManager::get()->drawAllUI();
 
 	//present
 	m_swap_chain->present(true);
